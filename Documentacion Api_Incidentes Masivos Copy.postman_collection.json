@@ -1,0 +1,2762 @@
+{
+	"info": {
+		"_postman_id": "d6b6412a-e6f8-4a7f-81b3-fdd0ee076949",
+		"name": "Documentacion Api_Incidentes Masivos Copy",
+		"description": "Para el despliegue del aplicativo se obtienen dos ambientes los cuales son de desarrollo y producción tener presente  \nque la Url [https://appswebdllo.grupokonecta.local:9091/](https://appswebdllo.grupokonecta.local:9091/ApiAuthRenting)ApiIncidentesMasivos  \nesta cambia acorde al ambiente y al puerto en el que el aplicativo este desplegado para efectos prácticos se utilizara  \nel ambiente donde se encuentra desplegado en Desarrollo.  \nPara que todos los endpoints funcionen se debe estar autenticado con un User y Password proporcionados por el área encargada de administrar la API, esta autenticación generara un token el cual debe ir en los Headers de la petición, la duración de este token es de 30 segundos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20696186",
+		"_collection_link": "https://interstellar-station-844945.postman.co/workspace/Api_Incidentes-Masivos~19cdbb19-3b40-4586-9c5e-688f7295a535/collection/20696186-d6b6412a-e6f8-4a7f-81b3-fdd0ee076949?action=share&source=collection_link&creator=20696186"
+	},
+	"item": [
+		{
+			"name": "Servidor 1.70",
+			"item": [
+				{
+					"name": "Ingreso de Clientes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenKonectaSer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"111\",\r\n    \"connid\":\"ASDAEWFLKMAHSDUIVASD465ASD4G675231\",\r\n    \"identificacion\": \"1088004118\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appswebdllo.grupokonecta.local:9091/ApiIncidentesMasivos/incidentesMasivos",
+							"protocol": "https",
+							"host": [
+								"appswebdllo",
+								"grupokonecta",
+								"local"
+							],
+							"port": "9091",
+							"path": [
+								"ApiIncidentesMasivos",
+								"incidentesMasivos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"111\",\r\n    \"conid\":\"ASDAEWFLKMAHSDUIVASD465ASD4G6ASD\",\r\n    \"cedula_cliente\": \"890904901\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appswebdllo.grupokonecta.local:9091/ApiIncidentesMasivos/incidentesMasivos",
+									"protocol": "https",
+									"host": [
+										"appswebdllo",
+										"grupokonecta",
+										"local"
+									],
+									"port": "9091",
+									"path": [
+										"ApiIncidentesMasivos",
+										"incidentesMasivos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "origin,access-control-request-method,access-control-request-headers,Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000;includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Apr 2024 16:30:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"codigo\": \"000\",\n    \"dateTime\": \"2024/04/23 11:30\",\n    \"message\": \"Aplica Para Eventos Masivos\",\n    \"tramaRespuesta\": \"111,000,Exitoso,~\",\n    \"creado_el\": \"2024-04-23\"\n}"
+						},
+						{
+							"name": "200 - OK no encontrado en la BD masivos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"111\",\r\n    \"connid\":\"ASDAEWFLKMAHSDUIVASD465ASD4G6ASD\",\r\n    \"identificacion\": \"1017212162\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appswebdllo.grupokonecta.local:9091/ApiIncidentesMasivos-2.7.22/incidentesMasivos",
+									"protocol": "https",
+									"host": [
+										"appswebdllo",
+										"grupokonecta",
+										"local"
+									],
+									"port": "9091",
+									"path": [
+										"ApiIncidentesMasivos-2.7.22",
+										"incidentesMasivos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "origin,access-control-request-method,access-control-request-headers,Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000;includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Apr 2024 22:04:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/04/30 17:04\",\n    \"message\": \"Cliente no encontrado en la BD masivos\",\n    \"tramaRespuesta\": \"111,400,No Exitoso,~\"\n}"
+						},
+						{
+							"name": "200 OK No Aplica Para Eventos Masivos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"111\",\r\n    \"connid\":\"ASDAEWFLKMAHSDUIVASD465ASD4G6ASD\",\r\n    \"identificacion\": \"1020471931\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appswebdllo.grupokonecta.local:9091/ApiIncidentesMasivos-2.7.22/incidentesMasivos",
+									"protocol": "https",
+									"host": [
+										"appswebdllo",
+										"grupokonecta",
+										"local"
+									],
+									"port": "9091",
+									"path": [
+										"ApiIncidentesMasivos-2.7.22",
+										"incidentesMasivos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "origin,access-control-request-method,access-control-request-headers,Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000;includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Apr 2024 22:10:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"codigo\": \"200\",\n    \"dateTime\": \"2024/04/30 17:10\",\n    \"message\": \"No Aplica Para Eventos Masivos\",\n    \"tramaRespuesta\": \"111,200,No Exitoso,~\"\n}"
+						},
+						{
+							"name": "405 - Cc Valor con lestras",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"111\",\r\n    \"connid\":\"ASDAEWFLKMAHSDUIVASD465ASD4G675231\",\r\n    \"identificacion\": \"102047asdasdasdasd1931\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/incidentesMasivos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"incidentesMasivos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 May 2024 21:42:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"405\",\n    \"dateTime\": \"2024/05/16 16:42\",\n    \"message\": \"ERROR EN EL INGRESO DE DATOS\"\n}"
+						},
+						{
+							"name": "405 Cc muy largo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"111\",\r\n    \"connid\":\"ASDAEWFLKMAHSDUIVASD465ASD4G675231\",\r\n    \"identificacion\": \"1020472342342342341931\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/incidentesMasivos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"incidentesMasivos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 May 2024 21:42:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"405\",\n    \"dateTime\": \"2024/05/16 16:42\",\n    \"message\": \"ERROR EN EL INGRESO DE DATOS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Autenticacion_Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = pm.response.json();\r",
+									"pm.collectionVariables.set('TokenKonectaSer', response.data.jwtToken);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"ApiIncidentesMasivos\",\r\n    \"password\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appswebdllo.grupokonecta.local:9091/ApiIncidentesMasivos/publico/authenticate",
+							"protocol": "https",
+							"host": [
+								"appswebdllo",
+								"grupokonecta",
+								"local"
+							],
+							"port": "9091",
+							"path": [
+								"ApiIncidentesMasivos",
+								"publico",
+								"authenticate"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"ApiIncidentesMasivos\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://appswebdllo.grupokonecta.local:9091/ApiIncidentesMasivos-2.7.22/publico/authenticate",
+									"protocol": "https",
+									"host": [
+										"appswebdllo",
+										"grupokonecta",
+										"local"
+									],
+									"port": "9091",
+									"path": [
+										"ApiIncidentesMasivos-2.7.22",
+										"publico",
+										"authenticate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "origin,access-control-request-method,access-control-request-headers,Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000;includeSubDomains"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Apr 2024 21:48:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"codigo\": \"000\",\n    \"dateTime\": \"2024/04/30 16:48\",\n    \"message\": \"Token created successfully\",\n    \"data\": {\n        \"jwtToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBcGlJbmNpZGVudGVzTWFzaXZvcyIsIklQIjoiMTAuMjIuMTQuMTgwIiwiZXhwIjoxNzE0NTE2NzE5LCJpYXQiOjE3MTQ1MTM3MTksIkFwcE5hbWUiOiJBcGlJbmNpZGVudGVzTWFzaXZvcyJ9.oD7bNDQ6AXVKkN3BJ_JH-DK3yKRiH2zyf639Z7tbDdI\"\n    }\n}"
+						},
+						{
+							"name": "401 - Error Url",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"ApiIncidentesMasivos\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/publico/authenticat",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"publico",
+										"authenticat"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 May 2024 12:21:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-05-06T12:21:11.060+00:00\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"No message available\",\n    \"path\": \"/publico/authenticat\"\n}"
+						},
+						{
+							"name": "400 - Error Usuario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"ApiIncidentesMasivo\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/publico/authenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"publico",
+										"authenticate"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 May 2024 12:21:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"TK-001\",\n    \"dateTime\": \"2024/05/06 07:21\",\n    \"message\": \"Incorrect user or password\"\n}"
+						},
+						{
+							"name": "400 - Error contraseña",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"ApiIncidentesMasivos\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/publico/authenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"publico",
+										"authenticate"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 May 2024 12:22:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"TK-001\",\n    \"dateTime\": \"2024/05/06 07:22\",\n    \"message\": \"Incorrect user or password\"\n}"
+						},
+						{
+							"name": "401- Error en Json",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userName\": \"ApiIncidentesMasivos\",\r\n    \"passwordd\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/publico/authenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"publico",
+										"authenticate"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 May 2024 12:43:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"TK-000\",\n    \"dateTime\": \"2024/05/06 07:43\",\n    \"message\": \"Error validando o generando el token\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenKonectaSer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"pruebasFunInsert2Archivos\",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"0\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-24 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-24 10:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"0\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4,6],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"true\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appswebdllo.grupokonecta.local:9091/ApiIncidentesMasivos/insertMasivo",
+							"protocol": "https",
+							"host": [
+								"appswebdllo",
+								"grupokonecta",
+								"local"
+							],
+							"port": "9091",
+							"path": [
+								"ApiIncidentesMasivos",
+								"insertMasivo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK -  Insert",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"pruebasFuncionalesInsert \",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"Pruebas Insert\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-20 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-21 00:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4],\r\n        \"archivos\":\"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/insertMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"insertMasivo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 May 2024 15:16:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"codigo\": \"200\",\n    \"dateTime\": \"2024/05/27 10:16\",\n    \"message\": \"Cargue Realizado Correctamente\",\n    \"id_evento_masivo\": 815\n}"
+						},
+						{
+							"name": "400 OK - sin nombre evento",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"\",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"Pruebas Insert\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-20 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-21 00:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4],\r\n        \"archivos\":\"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/insertMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"insertMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 May 2024 15:19:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/05/27 10:19\",\n    \"message\": \"ERROR EN EL INGRESO DE DATOS\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400 OK - Error archivo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"pruebasFuncionalesInsert\",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"Pruebas Insert\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-20 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-21 00:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4],\r\n        \"archivos\":\"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/insertMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"insertMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 May 2024 20:50:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"401\",\n    \"dateTime\": \"2024/05/27 15:50\",\n    \"message\": \"Archivo no encontrado o formato malo  Validar\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400- OK Variable en false",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"pruebasFuncionalesInsert\",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"2323\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-20 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-21 00:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"2320\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4,6,6,8,9,6,7,3,8,9,6,1,7,5,2],\r\n        \"archivos\":\"false\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/insertMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"insertMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 May 2024 17:43:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/05/29 12:43\",\n    \"message\": \"Archivo en False\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400 -OK Error en el SFTP",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"pruebasFunInsert2Archivos\",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"0\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-24 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-24 10:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"0\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4,6],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/insertMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"insertMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 16:15:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/06/24 11:15\",\n    \"message\": \"Validarcion del archivo SFTP Error\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400-OK Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"pruebasFunInsert2Archivos\",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"0\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-24 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-24 10:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"0\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4,6],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/insertMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"insertMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 17:11:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/06/24 12:11\",\n    \"message\": \"Archivo con data erronea antes del el save\",\n    \"id_evento_masivo\": 1160\n}"
+						},
+						{
+							"name": "400 -OK  DataError antes  el save Lista vacia",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"pruebasFunInsert2Archivos\",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"0\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-24 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-24 10:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"0\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4,6],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/insertMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"insertMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 17:33:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/06/24 12:33\",\n    \"message\": \"Archivo con data erronea antes del el save Lista vacia\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400-OK Lista SFTP vacia",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"pruebasFunInsert2Archivos\",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"0\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-24 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-24 10:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"0\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4,6],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/insertMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"insertMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 17:58:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/06/24 12:58\",\n    \"message\": \"Lista de Clientes Impactados Vacio Validar archivo  imprimiendo Variable de error de saveAllnull\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400 -OK Erro inser servicios",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"nombre_evento\":\"pruebasFunInsert2Archivos\",\r\n        \"descripcion\":\"¿Qué le pasó al cliente? Escenario 1 Cobro doble: Algunos clientes de las ciudades de Medellín y Cali con el producto de cuenta corriente,  tuvieron cobros por cheques girados el pasado 17 de octubre, nuevamente el 18 de octubre se les efectuó el cobro de los mismos cheques.\",\r\n        \"protocolo\":\"¿Qué debes informar al cliente? (Para Contact center y Redes) Atención uno a uno. Si un cliente te pregunta debes decirle que Insert \",\r\n        \"canal_afectado\":\"54\",\r\n        \"producto_afectado\":\"65\",\r\n        \"notificacion_cliente\":\"0\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-24 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-24 10:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"0\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n            },\r\n        \"servicios\":[3,4,6],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"true\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/insertMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"insertMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 19:17:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/06/24 14:17\",\n    \"message\": \" respuesta respuestaRespote.getCodigo() de el saveServicios \",\n    \"id_evento_masivo\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenKonectaSer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"id\":\"1542\",\r\n        \"nombre_evento\":\"Prueba numero 8 update \",\r\n        \"descripcion\":\" PPrueba numero 8 update Carlos \",\r\n        \"protocolo\":\" Prueba numero   8 update Carlos \",\r\n        \"canal_afectado\":\"84\",\r\n        \"producto_afectado\":\"75\",\r\n        \"notificacion_cliente\":\"\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2024-06-24 09:11:00\",\r\n        \"fecha_fin\":\"2024-06-24 12:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"actualizado_por\":\"carlos.aristizabal\",\r\n        \"actualizado_el\":\"2024-06-24 10:00:00\",\r\n        \"creado_por\":\"\",\r\n        \"creado_el\":\"2024-06-24 09:00:00\"\r\n            },\r\n        \"servicios\":[3,4],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"true\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appswebdllo.grupokonecta.local:9091/ApiIncidentesMasivos/updateMasivo",
+							"protocol": "https",
+							"host": [
+								"appswebdllo",
+								"grupokonecta",
+								"local"
+							],
+							"port": "9091",
+							"path": [
+								"ApiIncidentesMasivos",
+								"updateMasivo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 OK - Update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"id\":\"818\",\r\n        \"nombre_evento\":\"Pruebafuancionales con Yesica \",\r\n        \"descripcion\":\"Update con Yesica\",\r\n        \"protocolo\":\"Update con Yesica\",\r\n        \"canal_afectado\":\"84\",\r\n        \"producto_afectado\":\"75\",\r\n        \"notificacion_cliente\":\"Update\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2023-10-20 09:11:00\",\r\n        \"fecha_fin\":\"2023-10-21 00:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"actualizado_por\":\"carlos.aristizabal\",\r\n        \"actualizado_el\":\"2023-10-21 00:00:00\",\r\n        \"creado_por\":\"carlos.aristizabal\",\r\n        \"creado_el\":\"2023-10-21 00:00:00\"\r\n            },\r\n        \"servicios\":[3,4],\r\n        \"archivos\":\"true\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/updateMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"updateMasivo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 May 2024 15:58:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"codigo\": \"200\",\n    \"dateTime\": \"2024/05/27 10:58\",\n    \"message\": \"Exitoso\",\n    \"id_evento_masivo\": 818\n}"
+						},
+						{
+							"name": "400-OK Archivo con data erronea",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"id\":\"1135\",\r\n        \"nombre_evento\":\"Prueba numero 8 update \",\r\n        \"descripcion\":\" PPrueba numero 8 update Carlos \",\r\n        \"protocolo\":\" Prueba numero   8 update Carlos \",\r\n        \"canal_afectado\":\"84\",\r\n        \"producto_afectado\":\"75\",\r\n        \"notificacion_cliente\":\"\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2024-06-24 09:11:00\",\r\n        \"fecha_fin\":\"2024-06-24 12:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"actualizado_por\":\"carlos.aristizabal\",\r\n        \"actualizado_el\":\"2024-06-24 10:00:00\",\r\n        \"creado_por\":\"\",\r\n        \"creado_el\":\"2024-06-24 09:00:00\"\r\n            },\r\n        \"servicios\":[3,4],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"true\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/updateMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"updateMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 19:40:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/06/24 14:37\",\n    \"message\": \"Archivo con data erronea antes del el save metodo Update\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400-OK Archivo en False",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"id\":\"1135\",\r\n        \"nombre_evento\":\"Prueba numero 8 update \",\r\n        \"descripcion\":\" PPrueba numero 8 update Carlos \",\r\n        \"protocolo\":\" Prueba numero   8 update Carlos \",\r\n        \"canal_afectado\":\"84\",\r\n        \"producto_afectado\":\"75\",\r\n        \"notificacion_cliente\":\"\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2024-06-24 09:11:00\",\r\n        \"fecha_fin\":\"2024-06-24 12:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"actualizado_por\":\"carlos.aristizabal\",\r\n        \"actualizado_el\":\"2024-06-24 10:00:00\",\r\n        \"creado_por\":\"\",\r\n        \"creado_el\":\"2024-06-24 09:00:00\"\r\n            },\r\n        \"servicios\":[3,4],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"false\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/updateMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"updateMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 19:47:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/06/24 14:47\",\n    \"message\": \"Archivo en False metodo Update\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400-OK ERROR INGRESO DE DATOS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"id\":\"0\",\r\n        \"nombre_evento\":\"Prueba numero 8 update \",\r\n        \"descripcion\":\" PPrueba numero 8 update Carlos \",\r\n        \"protocolo\":\" Prueba numero   8 update Carlos \",\r\n        \"canal_afectado\":\"84\",\r\n        \"producto_afectado\":\"75\",\r\n        \"notificacion_cliente\":\"\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2024-06-24 09:11:00\",\r\n        \"fecha_fin\":\"2024-06-24 12:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"actualizado_por\":\"carlos.aristizabal\",\r\n        \"actualizado_el\":\"2024-06-24 10:00:00\",\r\n        \"creado_por\":\"\",\r\n        \"creado_el\":\"2024-06-24 09:00:00\"\r\n            },\r\n        \"servicios\":[3,4],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"false\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/updateMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"updateMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 19:54:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/06/24 14:54\",\n    \"message\": \"ERROR EN EL INGRESO DE DATOS metodo Update\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400- OK Lista de Clientes Impactados Vacio",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventoMasivosData\":{\r\n        \"id\":\"1542\",\r\n        \"nombre_evento\":\"Prueba numero 8 update \",\r\n        \"descripcion\":\" PPrueba numero 8 update Carlos \",\r\n        \"protocolo\":\" Prueba numero   8 update Carlos \",\r\n        \"canal_afectado\":\"84\",\r\n        \"producto_afectado\":\"75\",\r\n        \"notificacion_cliente\":\"\",\r\n        \"codificar\":\"1\",\r\n        \"codigo_actividad\":\"48\",\r\n        \"fecha_inicio\":\"2024-06-24 09:11:00\",\r\n        \"fecha_fin\":\"2024-06-24 12:00:00\",\r\n        \"radicar\":\"0\",\r\n        \"numero_radicado\":\"\",\r\n        \"is_bank\":\"\",\r\n        \"eliminado\":\"0\",\r\n        \"actualizado_por\":\"carlos.aristizabal\",\r\n        \"actualizado_el\":\"2024-06-24 10:00:00\",\r\n        \"creado_por\":\"\",\r\n        \"creado_el\":\"2024-06-24 09:00:00\"\r\n            },\r\n        \"servicios\":[3,4],\r\n        \"user_email\":\"carlos.aristizabal@konecta-group.com\",\r\n        \"archivos\":\"true\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/updateMasivo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"updateMasivo"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 19:56:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"400\",\n    \"dateTime\": \"2024/06/24 14:55\",\n    \"message\": \"Lista de Clientes Impactados Vacio Validar archivo  metodo Updatenull\",\n    \"id_evento_masivo\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "metodoConfirmacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TokenKonectaSer}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\":\"1135\",\r\n        \"archivos\":\"false\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://appswebdllo.grupokonecta.local:9091/ApiIncidentesMasivos/metodoConfirmacion",
+							"protocol": "https",
+							"host": [
+								"appswebdllo",
+								"grupokonecta",
+								"local"
+							],
+							"port": "9091",
+							"path": [
+								"ApiIncidentesMasivos",
+								"metodoConfirmacion"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200-OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\":\"814\",\r\n        \"archivos\":\"true\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/metodoConfirmacion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"metodoConfirmacion"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 May 2024 15:26:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"codigo\": \"200\",\n    \"dateTime\": \"2024/05/27 10:26\",\n    \"message\": \"Archivo y Data Validado Exitosamente\",\n    \"id_evento_masivo\": 814\n}"
+						},
+						{
+							"name": "200 ok no exites",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\":\"999\",\r\n        \"archivos\":\"true\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/metodoConfirmacion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"metodoConfirmacion"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 May 2024 15:27:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"401\",\n    \"dateTime\": \"2024/05/27 10:27\",\n    \"message\": \"IdEvento No existe\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400 - OK metodoConfirmacion archivo no existe",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\":\"1135\",\r\n        \"archivos\":\"true\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/metodoConfirmacion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"metodoConfirmacion"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 21 Jun 2024 11:27:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"401\",\n    \"dateTime\": \"2024/06/21 06:26\",\n    \"message\": \"Archivo no encontrado, Archivo con estructura erronea\",\n    \"id_evento_masivo\": 0\n}"
+						},
+						{
+							"name": "400-OK archivo false",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\":\"1135\",\r\n        \"archivos\":\"false\",\r\n        \"creado_por\":\"carlos.aristizabal\"\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/metodoConfirmacion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"metodoConfirmacion"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Jun 2024 19:34:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"codigo\": \"401\",\n    \"dateTime\": \"2024/06/24 14:34\",\n    \"message\": \"Archivo en False\",\n    \"id_evento_masivo\": 0\n}"
+						}
+					]
+				}
+			],
+			"description": "La Ulr es una localHots para con la que se hace pruebas desde la maquina de escritorio"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TokenKonectaSer",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
